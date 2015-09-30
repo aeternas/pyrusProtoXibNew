@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TableWindow : NSWindow <NSTableViewDataSource, NSTableViewDelegate>
+@interface TableWindow : NSWindow
 
 @end

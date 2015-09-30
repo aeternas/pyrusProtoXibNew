@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+//используем Core Data
+
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

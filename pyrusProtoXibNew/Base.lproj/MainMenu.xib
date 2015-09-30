@@ -697,7 +697,7 @@
                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="116" minWidth="40" maxWidth="1000" id="kid-ND-bHL" userLabel="check">
+                                        <tableColumn width="40" minWidth="40" maxWidth="1000" id="kid-ND-bHL" userLabel="check">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -712,13 +712,13 @@
                                                 <binding destination="oXQ-kb-Chl" name="value" keyPath="arrangedObjects.check" id="SL5-8v-EOQ"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="100" minWidth="40" maxWidth="1000" id="bej-SJ-3Hy" userLabel="task">
+                                        <tableColumn width="200" minWidth="40" maxWidth="1000" id="bej-SJ-3Hy" userLabel="task">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
-                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="qzh-5s-jHP">
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="qzh-5s-jHP">
                                                 <font key="font" size="13" name=".HelveticaNeueDeskInterface-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -728,13 +728,13 @@
                                                 <binding destination="oXQ-kb-Chl" name="value" keyPath="arrangedObjects.task" id="W6i-ED-iQJ"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn identifier="" width="806" minWidth="10" maxWidth="3.4028234663852886e+38" id="Oke-e9-TMW" userLabel="name">
+                                        <tableColumn identifier="" width="782" minWidth="10" maxWidth="3.4028234663852886e+38" id="Oke-e9-TMW" userLabel="name">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
-                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="NVG-vw-wDH">
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="NVG-vw-wDH">
                                                 <font key="font" size="13" name=".HelveticaNeueDeskInterface-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -885,8 +885,8 @@
                             <font key="font" size="8" name="HelveticaNeue"/>
                         </buttonCell>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMT-I5-EX8">
-                        <rect key="frame" x="803" y="657" width="101" height="21"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SMT-I5-EX8">
+                        <rect key="frame" x="828" y="654" width="103" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Иван Голиков" id="oxi-ga-MwC">
                             <font key="font" size="14" name="Helvetica-Bold"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -911,8 +911,8 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXK-p3-kYO">
-                        <rect key="frame" x="947" y="592" width="48" height="48"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="HXK-p3-kYO">
+                        <rect key="frame" x="947" y="592" width="48" height="46"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="48" id="Crh-GH-l7C"/>
                         </constraints>
@@ -921,7 +921,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <segmentedControl verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-U2-Jqn">
+                    <segmentedControl verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-U2-Jqn">
                         <rect key="frame" x="783" y="604" width="140" height="24"/>
                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="vGb-Nh-3zG">
                             <font key="font" metaFont="system"/>
@@ -958,6 +958,7 @@
                     <constraint firstItem="BxT-fX-pge" firstAttribute="centerY" secondItem="uMw-2x-Flc" secondAttribute="centerY" id="SCY-Og-gFb"/>
                     <constraint firstItem="HXK-p3-kYO" firstAttribute="bottom" secondItem="Tp6-mj-YN6" secondAttribute="bottom" id="Zuj-gE-k4E"/>
                     <constraint firstItem="eae-gI-0Of" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="100" id="aX1-Bt-w8P"/>
+                    <constraint firstItem="CoE-U2-Jqn" firstAttribute="centerY" secondItem="IhE-0b-Gfy" secondAttribute="centerY" id="bCD-RO-9RK"/>
                     <constraint firstItem="Tp6-mj-YN6" firstAttribute="top" secondItem="K5i-Mf-Qx4" secondAttribute="bottom" constant="10" symbolic="YES" id="cag-eQ-GMa"/>
                     <constraint firstItem="b7x-gT-IQ7" firstAttribute="leading" secondItem="3Jn-ad-bXy" secondAttribute="leading" id="gdL-0Z-ok4"/>
                     <constraint firstAttribute="trailing" secondItem="eae-gI-0Of" secondAttribute="trailing" id="jgo-XQ-p2u"/>
