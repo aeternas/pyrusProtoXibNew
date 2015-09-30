@@ -12,6 +12,9 @@
 		452469EC1BBC42FF006FD1BC /* pyrusProtoXibNew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 452469EA1BBC42FF006FD1BC /* pyrusProtoXibNew.xcdatamodeld */; };
 		452469EE1BBC42FF006FD1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452469ED1BBC42FF006FD1BC /* Assets.xcassets */; };
 		452469F11BBC42FF006FD1BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452469EF1BBC42FF006FD1BC /* MainMenu.xib */; };
+		452469FC1BBC4465006FD1BC /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 452469F91BBC4465006FD1BC /* Event+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		452469FD1BBC4465006FD1BC /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 452469FB1BBC4465006FD1BC /* Event.m */; settings = {ASSET_TAGS = (); }; };
+		45246A001BBC45DD006FD1BC /* TaskListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 452469FF1BBC45DD006FD1BC /* TaskListWindow.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		452469ED1BBC42FF006FD1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		452469F01BBC42FF006FD1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		452469F21BBC42FF006FD1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452469F81BBC4465006FD1BC /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		452469F91BBC4465006FD1BC /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		452469FA1BBC4465006FD1BC /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		452469FB1BBC4465006FD1BC /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		452469FE1BBC45DD006FD1BC /* TaskListWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListWindow.h; sourceTree = "<group>"; };
+		452469FF1BBC45DD006FD1BC /* TaskListWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,10 @@
 		452469D81BBC42FF006FD1BC = {
 			isa = PBXGroup;
 			children = (
+				452469F81BBC4465006FD1BC /* Event+CoreDataProperties.h */,
+				452469F91BBC4465006FD1BC /* Event+CoreDataProperties.m */,
+				452469FA1BBC4465006FD1BC /* Event.h */,
+				452469FB1BBC4465006FD1BC /* Event.m */,
 				452469E31BBC42FF006FD1BC /* pyrusProtoXibNew */,
 				452469E21BBC42FF006FD1BC /* Products */,
 			);
@@ -57,6 +70,8 @@
 			children = (
 				452469E41BBC42FF006FD1BC /* AppDelegate.h */,
 				452469E51BBC42FF006FD1BC /* AppDelegate.m */,
+				452469FE1BBC45DD006FD1BC /* TaskListWindow.h */,
+				452469FF1BBC45DD006FD1BC /* TaskListWindow.m */,
 				452469ED1BBC42FF006FD1BC /* Assets.xcassets */,
 				452469EF1BBC42FF006FD1BC /* MainMenu.xib */,
 				452469F21BBC42FF006FD1BC /* Info.plist */,
@@ -145,6 +160,9 @@
 			files = (
 				452469E91BBC42FF006FD1BC /* main.m in Sources */,
 				452469EC1BBC42FF006FD1BC /* pyrusProtoXibNew.xcdatamodeld in Sources */,
+				452469FD1BBC4465006FD1BC /* Event.m in Sources */,
+				452469FC1BBC4465006FD1BC /* Event+CoreDataProperties.m in Sources */,
+				45246A001BBC45DD006FD1BC /* TaskListWindow.m in Sources */,
 				452469E61BBC42FF006FD1BC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
