@@ -10,9 +10,4 @@
 
 @interface TableWindow : NSWindow <NSTableViewDataSource, NSTableViewDelegate>
 
-{
-    __weak IBOutlet NSTableView *tableList;
-    
-}
-
 @end

@@ -708,6 +708,9 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="oXQ-kb-Chl" name="value" keyPath="arrangedObjects.check" id="SL5-8v-EOQ"/>
+                                            </connections>
                                         </tableColumn>
                                         <tableColumn width="100" minWidth="40" maxWidth="1000" id="bej-SJ-3Hy" userLabel="task">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
@@ -716,7 +719,7 @@
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
                                             <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="qzh-5s-jHP">
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" size="13" name=".HelveticaNeueDeskInterface-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -732,7 +735,7 @@
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
                                             <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="NVG-vw-wDH">
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" size="13" name=".HelveticaNeueDeskInterface-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -771,7 +774,7 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </searchFieldCell>
                     </searchField>
-                    <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-RK-6L7">
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-RK-6L7">
                         <rect key="frame" x="-1" y="571" width="82" height="70"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="one" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="zTC-9z-xew">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -928,19 +931,15 @@
                             </segments>
                         </segmentedCell>
                     </segmentedControl>
-                    <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2C7-Xp-cdU">
-                        <rect key="frame" x="87" y="604" width="33" height="18"/>
-                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nQf-50-90c">
-                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-rg-kfn">
+                        <rect key="frame" x="89" y="603" width="81" height="23"/>
+                        <buttonCell key="cell" type="smallSquare" title="Удалить" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zuz-oJ-kuM">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                    </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3fg-JH-qIN">
-                        <rect key="frame" x="109" y="600" width="29" height="26"/>
-                        <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kzB-ie-dkT">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
+                        <connections>
+                            <action selector="remove:" target="oXQ-kb-Chl" id="Ayd-7q-nlS"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -971,9 +970,7 @@
                     <constraint firstItem="r2K-ba-ocA" firstAttribute="centerY" secondItem="K5i-Mf-Qx4" secondAttribute="centerY" id="rRq-RG-bIe"/>
                     <constraint firstItem="k1b-kn-t83" firstAttribute="top" secondItem="IhE-0b-Gfy" secondAttribute="bottom" id="rVu-Nu-U8B"/>
                     <constraint firstItem="b7x-gT-IQ7" firstAttribute="top" secondItem="3Jn-ad-bXy" secondAttribute="bottom" constant="10" id="vip-zq-zFg"/>
-                    <constraint firstItem="3fg-JH-qIN" firstAttribute="leading" secondItem="2C7-Xp-cdU" secondAttribute="trailing" priority="750" constant="-8" id="wwy-JY-LF6"/>
                     <constraint firstItem="K5i-Mf-Qx4" firstAttribute="leading" secondItem="r2K-ba-ocA" secondAttribute="trailing" constant="16" id="xsD-6s-yMz"/>
-                    <constraint firstItem="2C7-Xp-cdU" firstAttribute="leading" secondItem="W4h-RK-6L7" secondAttribute="trailing" constant="3" id="ywX-lb-IiF"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="412.5" y="374.5"/>
