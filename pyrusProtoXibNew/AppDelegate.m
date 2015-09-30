@@ -11,6 +11,8 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property (nonatomic, weak) IBOutlet NSTableView *tableList;
+
 - (IBAction)saveAction:(id)sender;
 
 @end
@@ -19,6 +21,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

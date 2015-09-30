@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="tableList" destination="k1b-kn-t83" id="sza-NI-jzy"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -671,7 +672,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="pyrusProtoXibNew" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="pyrusProtoXibNew" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="TableWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="1113" height="691"/>
@@ -682,17 +683,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="1113" height="691"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eae-gI-0Of">
-                        <rect key="frame" x="70" y="1" width="1044" height="639"/>
+                    <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eae-gI-0Of">
+                        <rect key="frame" x="80" y="0.0" width="1033" height="591"/>
                         <clipView key="contentView" ambiguous="YES" id="2PH-H3-oCM">
-                            <rect key="frame" x="1" y="17" width="1042" height="621"/>
+                            <rect key="frame" x="1" y="1" width="1031" height="589"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="nsi-PH-cDP" id="k1b-kn-t83">
-                                    <rect key="frame" x="0.0" y="0.0" width="1042" height="621"/>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="k1b-kn-t83">
+                                    <rect key="frame" x="0.0" y="0.0" width="1031" height="589"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
                                         <tableColumn width="116" minWidth="40" maxWidth="1000" id="kid-ND-bHL" userLabel="check">
@@ -724,7 +726,7 @@
                                                 <binding destination="oXQ-kb-Chl" name="value" keyPath="arrangedObjects.task" id="W6i-ED-iQJ"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn identifier="" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="Oke-e9-TMW" userLabel="name">
+                                        <tableColumn identifier="" width="806" minWidth="10" maxWidth="3.4028234663852886e+38" id="Oke-e9-TMW" userLabel="name">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -736,6 +738,9 @@
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="oXQ-kb-Chl" name="value" keyPath="arrangedObjects.name" id="Po8-UK-utD"/>
+                                            </connections>
                                         </tableColumn>
                                     </tableColumns>
                                 </tableView>
@@ -743,21 +748,130 @@
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="7eo-4U-6zb">
-                            <rect key="frame" x="1" y="622" width="1042" height="16"/>
+                            <rect key="frame" x="1" y="574" width="0.0" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="VBI-hX-oIf">
-                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                            <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <tableHeaderView key="headerView" id="nsi-PH-cDP">
-                            <rect key="frame" x="0.0" y="0.0" width="1042" height="17"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </tableHeaderView>
                     </scrollView>
+                    <colorWell ambiguous="YES" misplaced="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhE-0b-Gfy">
+                        <rect key="frame" x="79" y="591" width="1034" height="50"/>
+                        <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-2x-Flc">
+                        <rect key="frame" x="0.0" y="640" width="157" height="50"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logoPyrus" id="vbF-Q7-1EA"/>
+                    </imageView>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxT-fX-pge">
+                        <rect key="frame" x="194" y="654" width="352" height="22"/>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Поиск по задачам, формам, людям или файлам" usesSingleLineMode="YES" bezelStyle="round" id="ovH-af-Dpq">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                    </searchField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-RK-6L7">
+                        <rect key="frame" x="-1" y="571" width="82" height="70"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="one" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="zTC-9z-xew">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="add:" target="oXQ-kb-Chl" id="Zs4-s8-bhQ"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFA-kF-xAx">
+                        <rect key="frame" x="-5" y="502" width="94" height="70"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="two" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="g0f-Aw-N86">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwA-nQ-dLy">
+                        <rect key="frame" x="1" y="436" width="79" height="67"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="three" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3JM-tK-nvK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2L-Cl-hed">
+                        <rect key="frame" x="0.0" y="370" width="81" height="67"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="four" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="QK2-gU-LJp">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C26-8a-Idb">
+                        <rect key="frame" x="-1" y="307" width="83" height="64"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="five" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YdE-Tr-8ag">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Vs-wO-jnA">
+                        <rect key="frame" x="-2" y="240" width="83" height="68"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="six" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="DqI-8c-hHF">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swt-aj-n8Q">
+                        <rect key="frame" x="0.0" y="167" width="79" height="74"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="seven" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2oX-Is-9VL">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DeJ-Rq-336">
+                        <rect key="frame" x="-2" y="64" width="83" height="104"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="eight" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6Nd-XQ-3YA">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdI-5A-d5a">
+                        <rect key="frame" x="-2" y="26" width="83" height="21"/>
+                        <buttonCell key="cell" type="square" title="Поддержка" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="QhU-eq-w7d">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="8" name="HelveticaNeue"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-SX-gJ2">
+                        <rect key="frame" x="1" y="5" width="78" height="20"/>
+                        <buttonCell key="cell" type="square" title="API" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="96U-Ly-0Dj">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="8" name="HelveticaNeue"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5q-B6-kEd">
+                        <rect key="frame" x="0.0" y="46" width="81" height="18"/>
+                        <buttonCell key="cell" type="square" title="Справка" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="au9-6M-7Ei">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="8" name="HelveticaNeue"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="eae-gI-0Of" secondAttribute="bottom" id="0bj-Yq-dst"/>
+                    <constraint firstItem="eae-gI-0Of" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="100" id="aX1-Bt-w8P"/>
+                    <constraint firstAttribute="trailing" secondItem="eae-gI-0Of" secondAttribute="trailing" id="jgo-XQ-p2u"/>
+                    <constraint firstItem="k1b-kn-t83" firstAttribute="top" secondItem="IhE-0b-Gfy" secondAttribute="bottom" id="rVu-Nu-U8B"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="412.5" y="374.5"/>
         </window>
     </objects>
+    <resources>
+        <image name="eight" width="78" height="104"/>
+        <image name="five" width="83" height="64"/>
+        <image name="four" width="79" height="67"/>
+        <image name="logoPyrus" width="157" height="50"/>
+        <image name="one" width="79" height="70"/>
+        <image name="seven" width="79" height="74"/>
+        <image name="six" width="78" height="68"/>
+        <image name="three" width="79" height="67"/>
+        <image name="two" width="81" height="73"/>
+    </resources>
 </document>
